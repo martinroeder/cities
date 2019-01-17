@@ -15,6 +15,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func loadData(_ sender: Any) {
+//        let cities = CityData.cities
+//        print("Info: returned \(cities.count) objects")
+//        print("Info: \(cities.first!.name)")
+    }
 
+    @IBAction func sortData(_ sender: Any) {
+    }
+
+    @IBAction func showTable(_ sender: Any) {
+
+    }
 }
 
