@@ -35,21 +35,27 @@ class CitiesTableView: UITableViewController {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let city = filteredCities[indexPath.row]
+                if let controller = segue.destination as? MapViewController {
+                    controller.city = city
+                }
+            }
+        }
+    }
 }
 
 extension CitiesTableView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("Info: search text \(searchText)")
-
         DispatchQueue.global(qos: .background).async {
-            if searchText == "" {
-                self.filteredCities = self.data.listOfCities
-            } else {
-                self.filteredCities = self.data.listOfCities.filter {
-                    $0.name.lowercased().hasPrefix(searchText.lowercased())
-                }
+            let filteredResult = self.data.listOfCities.filter {
+                $0.name.lowercased().hasPrefix(searchText.lowercased())
             }
             DispatchQueue.main.async {
+                self.filteredCities = searchText == "" ? self.data.listOfCities : filteredResult
                 self.tableView.reloadData()
             }
         }

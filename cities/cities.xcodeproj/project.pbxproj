@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B20539C21F0C0C10012239A /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B20539B21F0C0C10012239A /* cities.json */; };
 		5B20539E21F0D3890012239A /* CitiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20539D21F0D3890012239A /* CitiesTableView.swift */; };
+		5B2053A021F0EE0A0012239A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20539F21F0EE0A0012239A /* MapViewController.swift */; };
 		5B3DA5C821F01D0600BD5FF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DA5C721F01D0600BD5FF4 /* AppDelegate.swift */; };
 		5B3DA5CA21F01D0600BD5FF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DA5C921F01D0600BD5FF4 /* ViewController.swift */; };
 		5B3DA5CD21F01D0600BD5FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3DA5CB21F01D0600BD5FF4 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		5B20539B21F0C0C10012239A /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		5B20539D21F0D3890012239A /* CitiesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableView.swift; sourceTree = "<group>"; };
+		5B20539F21F0EE0A0012239A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5B3DA5C421F01D0600BD5FF4 /* cities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3DA5C721F01D0600BD5FF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B3DA5C921F01D0600BD5FF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				5B3DA5C721F01D0600BD5FF4 /* AppDelegate.swift */,
 				5B3DA5C921F01D0600BD5FF4 /* ViewController.swift */,
 				5B3DA5CB21F01D0600BD5FF4 /* Main.storyboard */,
+				5B20539F21F0EE0A0012239A /* MapViewController.swift */,
 				5B20539D21F0D3890012239A /* CitiesTableView.swift */,
 				5B3DA5E721F01EDF00BD5FF4 /* City.swift */,
 				5B3DA5E921F0223700BD5FF4 /* CityData.swift */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3DA5CA21F01D0600BD5FF4 /* ViewController.swift in Sources */,
+				5B2053A021F0EE0A0012239A /* MapViewController.swift in Sources */,
 				5B3DA5C821F01D0600BD5FF4 /* AppDelegate.swift in Sources */,
 				5B3DA5E821F01EDF00BD5FF4 /* City.swift in Sources */,
 				5B3DA5EA21F0223700BD5FF4 /* CityData.swift in Sources */,
