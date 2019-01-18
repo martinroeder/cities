@@ -6,13 +6,6 @@
 //  Copyright © 2019 Martin Roeder. All rights reserved.
 //
 
-//{
-//    "country":"UA",
-//    "name":"Hurzuf", "_id":707860, "coord":{
-//        "lon":34.283333,
-//        "lat":44.549999 }
-//}
-
 import Foundation
 
 class City {

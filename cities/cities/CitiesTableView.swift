@@ -12,7 +12,6 @@ class CitiesTableView: UITableViewController {
 
     let data = CityData()
     var filteredCities: [City] = []
-    var lastSearchLength = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +51,10 @@ extension CitiesTableView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("Info: search text \(searchText)")
         DispatchQueue.global(qos: .background).async {
-
-            let filteredResult = self.lastSearchLength < searchText.count
-            ? self.filteredCities.filter { $0.name.lowercased().hasPrefix(searchText.lowercased()) }
-            : self.data.listOfCities.filter { $0.name.lowercased().hasPrefix(searchText.lowercased()) }
-
+            let filteredResult = self.data.filter(by: searchText)
             DispatchQueue.main.async {
-                self.filteredCities = searchText == "" ? self.data.listOfCities : filteredResult
+                self.filteredCities = filteredResult
                 self.tableView.reloadData()
-                self.lastSearchLength = searchText.count
             }
         }
     }

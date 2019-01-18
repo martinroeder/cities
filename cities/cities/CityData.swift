@@ -14,12 +14,13 @@ import UIKit
 class CityData : NSObject {
     
     let listOfCities: [City]
-    private var _listOfCities: [City] = []
-    
+
     override init() {
-        
-        //  URL of zipped JSON object
-//        if let url = URL(string: "https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/128845/1765144/LqgK6ORrJR4VZ1G/cities.json.zip")
+        var unOrderedCities: [City] = []
+
+        // URL of zipped JSON object
+        // Is there an easy way to unzip this file without using an external library? -MR
+        // if let url = URL(string: "https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/128845/1765144/LqgK6ORrJR4VZ1G/cities.json.zip")
         
         // Local URL of unzipped JSON object
         if let localUrl = Bundle.main.url(forResource: "cities", withExtension: "json") {
@@ -54,7 +55,7 @@ class CityData : NSObject {
                             continue
                         }
                         
-                        _listOfCities.append(City(country: country, name: name, id: id, lon: lon, lat: lat))
+                        unOrderedCities.append(City(country: country, name: name, id: id, lon: lon, lat: lat))
                     }
                 }
             } catch {
@@ -65,7 +66,7 @@ class CityData : NSObject {
         }
         
         // Sort data
-        listOfCities = _listOfCities.sorted(by: {
+        listOfCities = unOrderedCities.sorted(by: {
             if $0.name != $1.name {
                 return $0.name < $1.name
             } else {
@@ -74,5 +75,20 @@ class CityData : NSObject {
         })
         
         super.init()
+    }
+
+    var lastSearch = ""
+    var lastSearchResult: [City] = []
+    func filter(by name: String) -> [City] {
+        var result: [City] = []
+        if lastSearch == "" || !name.hasPrefix(lastSearch) {
+            result = listOfCities.filter { $0.name.lowercased().hasPrefix(name.lowercased()) }
+        } else {
+            result = lastSearchResult.filter { $0.name.lowercased().hasPrefix(name.lowercased()) }
+        }
+
+        lastSearch = name
+        lastSearchResult = result
+        return result
     }
 }

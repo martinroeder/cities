@@ -10,55 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cities" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Tg-f7-Sz8">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqs-3N-J9a">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="210.5"/>
-                                        <state key="normal" title="Load Data"/>
-                                        <connections>
-                                            <action selector="loadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLJ-PO-Qky"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfL-wr-0dF">
-                                        <rect key="frame" x="0.0" y="210.5" width="359" height="210"/>
-                                        <state key="normal" title="Sort Data"/>
-                                        <connections>
-                                            <action selector="sortData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJU-ul-QQh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rv-iK-KeJ">
-                                        <rect key="frame" x="0.0" y="420.5" width="359" height="210.5"/>
-                                        <state key="normal" title="Show Table"/>
-                                        <connections>
-                                            <action selector="showTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ckR-Ig-twr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="0Tg-f7-Sz8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="3M1-oy-fwG"/>
-                            <constraint firstItem="0Tg-f7-Sz8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Uxg-wT-ULj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Tg-f7-Sz8" secondAttribute="trailing" constant="8" id="vPi-dC-pR5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Tg-f7-Sz8" secondAttribute="bottom" constant="8" id="zkg-eu-9w2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-114" y="39"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pYp-xl-Iun">
             <objects>
